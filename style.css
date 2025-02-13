@@ -4,6 +4,7 @@
 
 html {
   accent-color: var(--color-accent);
+  /* color-scheme: dark; */
 }
 
 body {
@@ -58,12 +59,14 @@ nav li {
 }
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   text-align: center;
   margin-bottom: 15px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: var(--border-color);
+
 }
 
 nav a {
@@ -73,10 +76,10 @@ nav a {
   padding: 0.5em;
 }
 
-nav a.active {
+nav a.current {
   border-bottom-width: 0.4em;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: var(--border-color);
   padding-bottom: calc(10px - 0.4em);
 }
 
@@ -105,4 +108,11 @@ article {
 
 article h2 {
   margin: 0;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
 }
