@@ -39,7 +39,7 @@ for (let p of pages) {
     let a = document.createElement("a");
     a.href = url;
     a.textContent = title;
-    nav.append(a);
+    
 
     if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add("current");
@@ -48,6 +48,8 @@ for (let p of pages) {
     if (a.host !== location.host) {
         a.target = "_blank";
     }
+
+    nav.append(a);
 }
 
 // step 4
@@ -55,7 +57,7 @@ document.body.insertAdjacentHTML("afterbegin", `
 	<label class="color-scheme">
 		Theme:
 		<select>
-			<option value="auto">Auto</option>
+			<option value="light dark">Auto</option>
             <option value="dark">Dark</option>
             <option value="light">Light</option>
 		</select>
